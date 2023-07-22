@@ -1,5 +1,5 @@
-```markdown
-# Chrome Cookies Retrieval Script
+
+# Grab, send and delete
 
 This is a Python script that allows you to retrieve Google Chrome cookies, including the current user's username and external IP address. The script uses the Selenium library to control the Chrome browser and interact with it programmatically.
 
