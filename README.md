@@ -42,4 +42,3 @@ python chrome_cookies_retrieval.py
 
 - The self-deletion feature is potentially dangerous and irreversible. Use it with caution and only in specific scenarios where necessary.
 - Before using the self-deletion feature, ensure you have thoroughly tested the script and verified its behavior.
-```
